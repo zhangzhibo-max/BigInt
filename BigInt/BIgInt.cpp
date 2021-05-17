@@ -1,5 +1,13 @@
+//download the project 2021/5/17
+
 #include"BigInt.h"
 BigInt Tmp;
+
+
+void printf_info()
+{
+	printf("2021/5/17 test github commit.");
+}
 ostream& operator<<(ostream& out,const BigInt &bt)
 {
 	for(int i=bt.size() ; i>0; --i)
