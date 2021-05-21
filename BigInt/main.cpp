@@ -1,6 +1,12 @@
 #include"Seqlist.h"
 #include"BigInt.h"
+
+#ifdef LINUX
+
+#elif
 #include<Windows.h>
+#endif
+
 #include<time.h>
 #include<string>
 #include"Seqlist.h"
@@ -12,23 +18,25 @@ void main()
 	cout<<bt<<endl;
 }*/
 #if 1
-void main()
+int main()
 {
+	cout<<"hello BigInt,test the program in linux."<<endl;
 	time_t start ,end ;  
     double cost;  
     time(&start);  
 	BigInt bt,bt2,bt1;
-	bt1.LoadData(10000);
-	Sleep(100);
-	bt2.LoadData(10000);
+	bt1.LoadData(1000000);
 	cout<<"bt1 = "<<bt1<<endl;
+	sleep(1);
+	bt2.LoadData(1000000);
 	cout<<"bt2 = "<<bt2<<endl;
 	//BigInt::Add(bt,bt1,bt2);
 	bt = bt1 + bt2;
 	cout<<"bt = "<<bt<<endl; 
     time(&end); 
-	cost=difftime(end,start);  
-    cout<<"程序所用的时间："<<cost<<endl; 
+	cost = difftime(end,start);  
+    cout<<"the program use time:"<<cost<<" seconds."<<endl; 
+	return 0;
 }
 #endif
 /*int main()

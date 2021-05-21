@@ -53,7 +53,7 @@ public:
 		//len --;
 		return base[len--];
 	}
-	void pop_front()
+	bool pop_front()
 	{
 		if(IsEmpty())
 			return false;
